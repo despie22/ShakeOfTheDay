@@ -6,7 +6,7 @@ Public Class PlayerList
     Public Property selectedPatron As Patron
 
     ' Folder location for images
-    Dim folder As String = "C:\Users\Dylan\Desktop\ShakeOfTheDay\images"
+    Dim folder As String = "C:\Users\Dylan\Desktop\ShakeOfTheDay"
 
     ' BindingList for Patron objects
     Dim patrons As New BindingList(Of Patron)
@@ -29,8 +29,8 @@ Public Class PlayerList
 
         ' Atm and Beer images
         ptrAtm.Visible = False
-        ptrAtm.Image = Image.FromFile(System.IO.Path.Combine(folder, "atm" & ".png"))
-        ptrBeer.Image = Image.FromFile(System.IO.Path.Combine(folder, "beer" & ".png"))
+        ptrAtm.Image = Image.FromFile(System.IO.Path.Combine(folder, "images/atm" & ".png"))
+        ptrBeer.Image = Image.FromFile(System.IO.Path.Combine(folder, "images/beer" & ".png"))
 
         ' Load ListBox
         lbxPatrons.DataSource = patrons
@@ -214,7 +214,7 @@ Public Class PlayerList
     ' Connect to the PatronDB
     Private Function connectToDb() As SqlConnection
         'set up connection string
-        Dim connectionString As String = "Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dylan\Desktop\ShakeOfTheDay\ShakeOfTheDay\PatronDB.mdf;Integrated Security=True;"
+        Dim connectionString As String = "Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" & folder & "\ShakeOfTheDay\PatronDB.mdf;Integrated Security=True;"
 
         'create connection object
         Dim dbConnection As New SqlConnection(connectionString)
