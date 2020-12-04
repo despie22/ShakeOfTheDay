@@ -9,6 +9,7 @@ In file explorer, copy the path of the ShakeOfTheDay folder.
 On line 9 of PlayerList.vb replace "C:\Users\Dylan\Desktop\ShakeOfTheDay" with the copied path
 
 On line 15 of ShakeForm.vb replace "C:\Users\Dylan\Desktop\ShakeOfTheDay" with the coped path
+
 On line 336 of ShakeForm.vb replace the "C:\Users\Dylan\Desktop\ShakeOfTheDay" part of the string with the copied file path
 "Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=YOUR FILE PATH HERE\ShakeOfTheDay\PatronDB.mdf;Integrated Security=True;"
 
