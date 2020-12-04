@@ -12,7 +12,7 @@ Public Class ShakeForm
     Dim dbConnection As SqlConnection = connectToDb()
 
     ' Folder where images are
-    Dim folder As String = "C:\Users\Dylan\Desktop\ShakeOfTheDay\images"
+    Dim folder As String = "C:\Users\Dylan\Desktop\ShakeOfTheDay"
 
     ' Used to compare die needed to win
     Dim numberDay As String
@@ -37,7 +37,7 @@ Public Class ShakeForm
         lblGamesWon.Text = thisPatron.Won
 
         ' Get the die needed to win
-        numberDay = System.IO.Path.Combine(folder, rollDice(1, 6) & ".png")
+        numberDay = System.IO.Path.Combine(folder, "images\" & rollDice(1, 6) & ".png")
         ptrDay.Image = Image.FromFile(numberDay)
 
     End Sub
@@ -151,11 +151,11 @@ Public Class ShakeForm
         btnSaveFive.Hide()
 
         ' Rolls six dice
-        Dim diceOne As String = System.IO.Path.Combine(folder, rollDice(1, 6) & ".png")
-        Dim diceTwo As String = System.IO.Path.Combine(folder, rollDice(1, 6) & ".png")
-        Dim diceThree As String = System.IO.Path.Combine(folder, rollDice(1, 6) & ".png")
-        Dim diceFour As String = System.IO.Path.Combine(folder, rollDice(1, 6) & ".png")
-        Dim diceFive As String = System.IO.Path.Combine(folder, rollDice(1, 6) & ".png")
+        Dim diceOne As String = System.IO.Path.Combine(folder, "images\" & rollDice(1, 6) & ".png")
+        Dim diceTwo As String = System.IO.Path.Combine(folder, "images\" & rollDice(1, 6) & ".png")
+        Dim diceThree As String = System.IO.Path.Combine(folder, "images\" & rollDice(1, 6) & ".png")
+        Dim diceFour As String = System.IO.Path.Combine(folder, "images\" & rollDice(1, 6) & ".png")
+        Dim diceFive As String = System.IO.Path.Combine(folder, "images\" & rollDice(1, 6) & ".png")
 
         ' Assigns picture depending on rolled die
         ptrDiceOne.Image = Image.FromFile(diceOne)
