@@ -1,7 +1,7 @@
 # ShakeOfTheDay
 This .NET application was developed as a unique school project to display Database inegration with Windows Forms.
 
-This was written March 2020 and needs some refactoring, like creating for loops and adding more abtraction, that can been seen in the python version of this application which will be up soon.
+This was written March 2020 and needs some refactoring (like creating for loops and adding more abtraction) that can been seen in the python version of this application which will be up soon.
 
 In order to get the Database to work a few lines of code will need to be replaced.
 In file explorer, copy the path of the ShakeOfTheDay folder.
